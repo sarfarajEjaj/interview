@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail view</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="catDetails.imagePath" onError="this.src='assets/images/noimage.jpg'" />
+    <ion-card-header>
+      {{catDetails.name}}
+    </ion-card-header>
+    <ion-card-content>
+      {{catDetails.description}}
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="detail_card">
+      <ion-card-header>
+          Other details
+        </ion-card-header>
+    <ion-card-content>
+      <div class="detail_dec">
+        <p>origin:-</p>
+        <span>{{catDetails.origin}}</span>
+      </div>
+      <div class="detail_dec">
+        <p>Affection level:-</p>
+        <span>{{catDetails.affection_level}}</span>
+      </div>
+      <div class="detail_dec">
+        <p>Child friendly</p>
+        <span>{{catDetails.child_friendly}}</span>
+      </div>
+      <div class="detail_dec">
+        <p>weight (imperial):-</p>
+        <span>{{catDetails.weight.imperial}}</span>
+      </div>
+
+      <div class="detail_dec">
+        <p>weight (metric):-</p>
+        <span>{{catDetails.weight.metric}}</span>
+      </div>
+      <div>
+        <span>For more details refer below link:-</span>
+        <p>{{catDetails.wikipedia_url}}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
